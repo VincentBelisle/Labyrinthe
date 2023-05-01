@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CherryController : MonoBehaviour
 {
-
+    public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -16,6 +17,7 @@ public class CherryController : MonoBehaviour
     {
         if(collision.gameObject.tag == "ChompSlayer")
         {
+            audioSource.Play();
             Destroy(gameObject, 1f);
         }
     }
