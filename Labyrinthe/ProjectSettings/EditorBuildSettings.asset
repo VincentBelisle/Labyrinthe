@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuJeu.unity
+    guid: 51549f3cc41c0a04a9e9f3bad05db663
+  - enabled: 1
+    path: Assets/_ChompMan-PM/Scenes/Level_01.unity
+    guid: dbfe71574679e0442a39f4183ebfcf96
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d9a0d5b6619d05446ab7b9896e695426, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b5ad77d4c77385d4687142ffe67880a8, type: 2}
