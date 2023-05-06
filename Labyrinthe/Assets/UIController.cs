@@ -26,6 +26,6 @@ public class UIController : MonoBehaviour
     {
         amoutOfCherries--;
         cherryController.text = amoutOfCherries.ToString();
-        print(amoutOfCherries);
+        Debug.Log(amoutOfCherries);
     }
 }
