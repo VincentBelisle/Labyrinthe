@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame updateW
     void Start()
     {
+        cherryText.text = "Cerises restantes: " + amoutOfCherries.ToString();
         CherryController.collectCherry += collectCherry;
     }
 

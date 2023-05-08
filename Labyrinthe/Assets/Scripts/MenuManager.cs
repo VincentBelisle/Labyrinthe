@@ -7,10 +7,10 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject instructions;
     public GameObject mainMenu;
+    public GameObject optionsMenu;	
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -38,4 +38,20 @@ public class MenuManager : MonoBehaviour
         instructions.SetActive(false);
         mainMenu.SetActive(true);
     }
+    public void ShowOptions()
+    {
+        optionsMenu.SetActive(true);
+        mainMenu.SetActive(false);
+    }
+    public void HideOptions()
+    {
+        optionsMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void MuteAudio(bool isMuted)
+    {
+        AudioListener.volume = isMuted ? 1 : 0;
+    }
+    
 }
