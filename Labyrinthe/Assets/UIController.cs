@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public TextMeshProUGUI cherryController;
+    public TextMeshProUGUI cherryText;
 
     int amoutOfCherries = 9;
 
@@ -25,7 +25,7 @@ public class UIController : MonoBehaviour
     private void collectCherry()
     {
         amoutOfCherries--;
-        cherryController.text = amoutOfCherries.ToString();
-        Debug.Log(amoutOfCherries);
+        cherryText.text = "Cerises restantes: " + amoutOfCherries.ToString();
+        print(amoutOfCherries);
     }
 }
