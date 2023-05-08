@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5efa5b18657b24bb7a12014dd06d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cherryController: {fileID: 0}
+  cherryText: {fileID: 0}
 --- !u!4 &104362402
 Transform:
   m_ObjectHideFlags: 0
@@ -4761,9 +4761,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 660084158}
     m_Modifications:
+    - target: {fileID: 7220977421686351351, guid: d33249e5ae722fb40ad2807c439696d9, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220977421686351351, guid: d33249e5ae722fb40ad2807c439696d9, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220977421686351351, guid: d33249e5ae722fb40ad2807c439696d9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220977421686351351, guid: d33249e5ae722fb40ad2807c439696d9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7308235905141624706, guid: d33249e5ae722fb40ad2807c439696d9, type: 3}
       propertyPath: m_Name
       value: Chomp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308235905141624706, guid: d33249e5ae722fb40ad2807c439696d9, type: 3}
+      propertyPath: m_TagString
+      value: chompMan
       objectReference: {fileID: 0}
     - target: {fileID: 7308235905142051746, guid: d33249e5ae722fb40ad2807c439696d9, type: 3}
       propertyPath: m_RootOrder
@@ -5138,10 +5158,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 1
+  m_Acceleration: 2
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 30
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -5163,7 +5183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cible: {fileID: 1987484967}
-  speed: 5
+  speed: 0.5
 --- !u!1 &1865682288
 GameObject:
   m_ObjectHideFlags: 0
@@ -5357,6 +5377,8 @@ GameObject:
   - component: {fileID: 1987484968}
   - component: {fileID: 1987484971}
   - component: {fileID: 1987484972}
+  - component: {fileID: 1987484973}
+  - component: {fileID: 1987484974}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: ChompSlayer
@@ -5403,7 +5425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987484967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: 0.307, z: 0.53}
+  m_LocalPosition: {x: -0.06, y: 0.307, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5437,12 +5459,40 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987484967}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.8
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1987484973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987484967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6769018e92bcf4587629e43d18243d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1987484974
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987484967}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2028424668
 GameObject:
   m_ObjectHideFlags: 0
@@ -5817,6 +5867,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3677092584728416446, guid: 8dadb4a5d9de8a941b6bb68d601ad73f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3251690325731265376, guid: 8dadb4a5d9de8a941b6bb68d601ad73f, type: 3}
       propertyPath: m_Name
       value: Cherry
