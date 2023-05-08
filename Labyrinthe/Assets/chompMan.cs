@@ -8,7 +8,7 @@ public class chompMan : MonoBehaviour
 
 
     public GameObject cible;
-    public float speed = 2.5f;
+    public float speed = 0.001f;
 
     private NavMeshAgent navMeshAgent;
     // Start is called before the first frame update
@@ -16,12 +16,12 @@ public class chompMan : MonoBehaviour
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.speed = speed;
     }
 
     // Update is called once per frame
     void Update()
     {
         navMeshAgent.SetDestination(cible.transform.position);
+        navMeshAgent.speed = speed;
     }
 }
