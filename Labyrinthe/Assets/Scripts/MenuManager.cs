@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MenuManager : MonoBehaviour
 {
     public GameObject instructions;
     public GameObject mainMenu;
-    public GameObject optionsMenu;	
+    public GameObject optionsMenu;
     // Start is called before the first frame update
     void Start()
     {
+        AudioListener.pause = PlayerPrefs.GetInt("Muted") == 1;
     }
 
     // Update is called once per frame
@@ -51,7 +53,12 @@ public class MenuManager : MonoBehaviour
 
     public void MuteAudio(bool isMuted)
     {
-        AudioListener.volume = isMuted ? 1 : 0;
+        PlayerPrefs.SetInt("Muted", isMuted ? 1 : 0);
+    }
+    public void SetEasy(bool easy)
+    {
+        PlayerPrefs.SetFloat("ChompSpeed", easy ? 0.5f : 1);
+
     }
     
 }

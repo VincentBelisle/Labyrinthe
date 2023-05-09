@@ -14,10 +14,11 @@ public class CherryController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.tag == "ChompSlayer")
+        if(collision.CompareTag("ChompSlayer"))
         {
+            Debug.Log("Cherry collected");
             audioSource.Play();
             collectCherry?.Invoke();
             Destroy(gameObject, 1f);

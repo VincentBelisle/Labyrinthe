@@ -16,6 +16,7 @@ public class chompMan : MonoBehaviour
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        speed = PlayerPrefs.GetFloat("ChompSpeed");
     }
 
     // Update is called once per frame

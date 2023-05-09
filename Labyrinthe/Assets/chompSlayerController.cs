@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class chompSlayerController : MonoBehaviour
 {
@@ -8,7 +10,8 @@ public class chompSlayerController : MonoBehaviour
     {
         if (collision.CompareTag("chompMan")){
             Debug.Log("you died");
-            Destroy(collision.gameObject);
+            SceneManager.LoadScene("MenuJeu", LoadSceneMode.Single);
+
         }
     }
 }
