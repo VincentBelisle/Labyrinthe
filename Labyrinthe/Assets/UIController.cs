@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class UIController : MonoBehaviour
 {
@@ -20,6 +22,11 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (amoutOfCherries == 0)
+        {
+            SceneManager.LoadScene("MenuJeu", LoadSceneMode.Single);
+
+        }
         
     }
 
